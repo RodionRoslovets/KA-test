@@ -1,0 +1,93 @@
+block variables
+	- var menu = ['О нас', 'Оплата и доставка', 'Акции и скидки', 'Новости' , 'Рецепты', 'Контакты']
+
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+		link(href="./assets/static/font-awesome/css/all.css" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet")
+		script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+		title КА тест
+	body
+		header
+			.container-fluid.container-lg.py-2
+				.row.mt-md-2.mt-0
+					.logo.col-md-2.col-5
+						a(href="https://roslovets-sandbox.ru")
+							img(src="./assets/img/Header-logo.png")
+					.search.col-xl-6.col-md-5.col-5.offset-md-2.px-0.align-items-center.d-none.d-md-flex
+						form(action="#")
+							label.my-0
+								i.fas.fa-search.search-icon
+								input.search(type="search")
+					.soc.col-md-2.col-3.justify-content-between.d-none.d-md-flex
+						a(href="https://vk.com")
+							img(src="./assets/img/vk.png" alt="vk")
+						a(href="https://facebook.com")
+							img(src="./assets/img/facebook.png" alt="facebook")
+						a(href="https://instagram.com")
+							img(src="./assets/img/instagram.png" alt="instagram")
+					.logIn.col-xl-2.col-md-3.col-2.px-0.d-none.d-md-block
+						a.d-md-inline.d-none(href="#")
+							img(src="./assets/img/user.png" alt="user")
+							| Войти/Регистрация
+					hr.col-md-10.offset-2.my-2.d-none.d-md-block
+					.food-market.col-xl-4.col-md-3.offset-2.px-0.d-none.d-md-block
+						p Food market
+					.buisness-hours.col-md-2.d-none.d-md-block
+						.buisness-hours__phone
+							p +7 000 000 00 00
+						.buisness-hours__hours
+							p Работаем с 9:00 до 21:00
+					.delivery.col-md-2.d-none.d-md-block
+						img(src="./assets/img/delivery-truck.png" alt="delivery-truck")
+						p Доставка в день заказа
+					.back-call.col-xl-2.col-md-3.mb-2.d-none.d-md-block
+						button Заказать звонок
+					.mobile-block.d-block.d-md-none.col-7
+						.row.justify-content-end
+							a.phone-mobile.col-12(href="tel:+70000000000") 
+								p +7 000 000 00 00
+							a.cart.d-flex.justify-content-end.align-items-center
+								i.fas.fa-shopping-basket
+							.logIn
+								a(href="#")
+									img(src="./assets/img/user.png" alt="user")
+							.soc.justify-content-between.d-flex
+								a(href="https://vk.com")
+									img(src="./assets/img/vk.png" alt="vk")
+								a(href="https://facebook.com")
+									img(src="./assets/img/facebook.png" alt="facebook")
+								a(href="https://instagram.com")
+									img(src="./assets/img/instagram.png" alt="instagram")
+							.search.col-12.d-flex.align-items-center.px-0.justify-content-end.mt-2
+								form(action="#")
+									label.search-input
+										input.search(type="search")
+										i.fas.fa-search.search-icon
+			nav.nav
+				.container-fluid.container-lg
+					.row.align-items-center
+						.catalog.col-md-3.col-6
+							i.fas.fa-bars
+							a(href="#") Каталог товаров
+						.navbar.navbar-expand-md.navbar-light.col-md-7.col-6
+							button.navbar-toggler.ml-auto(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+								i.fas.fa-bars(style="color:white;")
+							.collapse.navbar-collapse#navbarSupportedContent
+								ul.navbar-nav.mr-auto.d-flex.justify-content-around
+									each el in menu
+										li.nav-item
+											a.nav-link(href="#") #{el}
+						a.cart.col-md-2.col-6.justify-content-end.d-md-flex.d-none(href="#")
+							i.fas.fa-shopping-basket
+							p Мои покупки
+								br 
+								span 0 
+								| руб

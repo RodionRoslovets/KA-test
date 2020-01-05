@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./assets/static/font-awesome/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>КА тест</title>
+  <link href="./assets/css/main.css" rel="stylesheet"></head>
+  <body>
+    <header>
+      <div class="container-fluid container-lg py-2">
+        <div class="row mt-md-2 mt-0">
+          <div class="logo col-md-2 col-5"><a href="https://roslovets-sandbox.ru"><img src="./assets/img/Header-logo.png"></a></div>
+          <div class="search col-xl-6 col-md-5 col-5 offset-md-2 px-0 align-items-center d-none d-md-flex">
+            <form action="#">
+              <label class="my-0"><i class="fas fa-search search-icon"></i>
+                <input class="search" type="search">
+              </label>
+            </form>
+          </div>
+          <div class="soc col-md-2 col-3 justify-content-between d-none d-md-flex"><a href="https://vk.com"><img src="./assets/img/vk.png" alt="vk"></a><a href="https://facebook.com"><img src="./assets/img/facebook.png" alt="facebook"></a><a href="https://instagram.com"><img src="./assets/img/instagram.png" alt="instagram"></a></div>
+          <div class="logIn col-xl-2 col-md-3 col-2 px-0 d-none d-md-block"><a class="d-md-inline d-none" href="#"><img src="./assets/img/user.png" alt="user">Войти/Регистрация</a></div>
+          <hr class="col-md-10 offset-2 my-2 d-none d-md-block">
+          <div class="food-market col-xl-4 col-md-3 offset-2 px-0 d-none d-md-block">
+            <p>Food market</p>
+          </div>
+          <div class="buisness-hours col-md-2 d-none d-md-block">
+            <div class="buisness-hours__phone">
+              <p>+7 000 000 00 00</p>
+            </div>
+            <div class="buisness-hours__hours">
+              <p>Работаем с 9:00 до 21:00</p>
+            </div>
+          </div>
+          <div class="delivery col-md-2 d-none d-md-block"><img src="./assets/img/delivery-truck.png" alt="delivery-truck">
+            <p>Доставка в день заказа</p>
+          </div>
+          <div class="back-call col-xl-2 col-md-3 mb-2 d-none d-md-block">
+            <button>Заказать звонок</button>
+          </div>
+          <div class="mobile-block d-block d-md-none col-7">
+            <div class="row justify-content-end"><a class="phone-mobile col-12" href="tel:+70000000000"> 
+                <p>+7 000 000 00 00</p></a><a class="cart d-flex justify-content-end align-items-center"><i class="fas fa-shopping-basket"></i></a>
+              <div class="logIn"><a href="#"><img src="./assets/img/user.png" alt="user"></a></div>
+              <div class="soc justify-content-between d-flex"><a href="https://vk.com"><img src="./assets/img/vk.png" alt="vk"></a><a href="https://facebook.com"><img src="./assets/img/facebook.png" alt="facebook"></a><a href="https://instagram.com"><img src="./assets/img/instagram.png" alt="instagram"></a></div>
+              <div class="search col-12 d-flex align-items-center px-0 justify-content-end mt-2">
+                <form action="#">
+                  <label class="search-input">
+                    <input class="search" type="search"><i class="fas fa-search search-icon"></i>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="container-fluid container-lg">
+          <div class="row align-items-center">
+            <div class="catalog col-md-3 col-6"><i class="fas fa-bars"></i><a href="#">Каталог товаров</a></div>
+            <div class="navbar navbar-expand-md navbar-light col-md-7 col-6">
+              <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars" style="color:white;"></i></button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto d-flex justify-content-around">
+                  <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Оплата и доставка</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Акции и скидки</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Рецепты</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div><a class="cart col-md-2 col-6 justify-content-end d-md-flex d-none" href="#"><i class="fas fa-shopping-basket"></i>
+              <p>Мои покупки<br><span>0 </span>руб</p></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+  <script type="text/javascript" src="./assets/js/main.js"></script></body>
+</html>
+<main class="main">
+  <div class="container-fluid container-lg pt-3">
+    <div class="row">
+      <div class="catalog-menu col-md-3 d-none d-md-block">
+        <ul class="catalog-menu__list">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/discount.png">Акции и скидки</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/caviar.png">Икра</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/shrimp.png">Морепродукты</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/fish.png">Рыба</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/can.png">Консервы</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/groceries.png">Бакалея</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/chef.png">Кулинария</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/bottles.png">Соль и специи</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/water.png">Энергия океана</a></li>
+          <hr class="catalog-menu__line">
+          <li class="catalog-menu__item d-flex align-items-center"><a href="#"> <img src="./assets/img/broccoli.png">Витамины</a></li>
+        </ul>
+      </div>
+      <div class="banner col-md-9">
+        <div class="banner-block d-flex flex-column align-items-start">
+          <p class="banner-heading">Камчатский краб</p>
+          <p class="banner-description">Сайт рыбатекст поможет дизайнеру, верстальщику,<br>вебмастеру сгенерировать</p>
+          <button class="banner-button">Подробнее </button>
+        </div>
+      </div>
+    </div>
+    <div class="recomended">
+      <h2 class="recomended-heading">Рекомендуем</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="recomended-block"><img class="recomended-image" src="./assets/img/fish-steak.jpg">
+            <div class="recomended-rating"><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star rating-star__unrated fas fa-star"></i></div><a class="recomended-description" href="#">Барабулька черноморская (10-13 см) свежемороженая, 1 кг</a>
+            <div class="recomended-buttons">
+              <button class="recomended-button">5 кг</button>
+              <button class="recomended-button__bordered">20 кг</button>
+            </div>
+            <div class="recomended-price d-flex justify-content-between">
+              <div class="price-line d-flex">
+                <div class="price-crossed">870 руб.</div>
+                <div class="price-normal">870 руб.</div>
+              </div>
+              <button class="recomended-button recomended-cart"><i class="fas fa-shopping-basket"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="recomended-block"><img class="recomended-image" src="./assets/img/meat.jpg">
+            <div class="recomended-rating"><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star rating-star__unrated fas fa-star"></i></div><a class="recomended-description" href="#">Барабулька черноморская (10-13 см) свежемороженая, 1 кг</a>
+            <div class="recomended-buttons">
+              <button class="recomended-button">5 кг</button>
+              <button class="recomended-button__bordered">20 кг</button>
+            </div>
+            <div class="recomended-price d-flex justify-content-between">
+              <div class="price-line d-flex">
+                <div class="price-crossed">870 руб.</div>
+                <div class="price-normal">870 руб.</div>
+              </div>
+              <button class="recomended-button recomended-cart"><i class="fas fa-shopping-basket"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="recomended-block"><img class="recomended-image" src="./assets/img/fish.jpg">
+            <div class="recomended-rating"><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star rating-star__unrated fas fa-star"></i></div><a class="recomended-description" href="#">Барабулька черноморская (10-13 см) свежемороженая, 1 кг</a>
+            <div class="recomended-buttons">
+              <button class="recomended-button">5 кг</button>
+              <button class="recomended-button__bordered">20 кг</button>
+            </div>
+            <div class="recomended-price d-flex justify-content-between">
+              <div class="price-line d-flex">
+                <div class="price-crossed">870 руб.</div>
+                <div class="price-normal">870 руб.</div>
+              </div>
+              <button class="recomended-button recomended-cart"><i class="fas fa-shopping-basket"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="recomended-block"><img class="recomended-image" src="./assets/img/caviar-jar.jpg">
+            <div class="recomended-rating"><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star fas fa-star"></i><i class="rating-star rating-star__unrated fas fa-star"></i></div><a class="recomended-description" href="#">Барабулька черноморская (10-13 см) свежемороженая, 1 кг</a>
+            <div class="recomended-buttons">
+              <button class="recomended-button">5 кг</button>
+              <button class="recomended-button__bordered">20 кг</button>
+            </div>
+            <div class="recomended-price d-flex justify-content-between">
+              <div class="price-line d-flex">
+                <div class="price-crossed">870 руб.</div>
+                <div class="price-normal">870 руб.</div>
+              </div>
+              <button class="recomended-button recomended-cart"><i class="fas fa-shopping-basket"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-2">
+        <button class="recomended-button__catalog">Перейти в каталог</button>
+      </div>
+    </div>
+    <div class="advantages col-12">
+      <h2 class="advantages-heading">Наши преимущества</h2>
+      <div class="row d-flex justify-content-around">
+        <div class="advantage d-flex flex-column align-items-center"><img class="advantage-icon" src="./assets/img/truck.png">
+          <p class="advantage-description">Быстрая доставка</p>
+        </div>
+        <div class="advantage d-flex flex-column align-items-center"><img class="advantage-icon" src="./assets/img/ok.png">
+          <p class="advantage-description">Высокое качество продуктов</p>
+        </div>
+        <div class="advantage d-flex flex-column align-items-center"><img class="advantage-icon" src="./assets/img/present.png">
+          <p class="advantage-description">Бонусы за покупки</p>
+        </div>
+      </div>
+    </div>
+    <div class="news col-12">
+      <h2 class="news-heading">Новости</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="news-item"><a href="#"><img class="news-item-image" src="./assets/img/crab.jpg"></a>
+            <div class="news-item-description">
+              <h3 class="news-item-description__heading"><a href="#">Сайт рыба текст поможет  дизайнеру</a></h3>
+              <p class="news-item-description__snippet"> <a href="#">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</a></p><a class="news-item-description__link" href="#">Читать далее...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="news-item"><a href="#"><img class="news-item-image" src="./assets/img/crab.jpg"></a>
+            <div class="news-item-description">
+              <h3 class="news-item-description__heading"><a href="#">Сайт рыба текст поможет  дизайнеру</a></h3>
+              <p class="news-item-description__snippet"> <a href="#">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</a></p><a class="news-item-description__link" href="#">Читать далее...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="news-item"><a href="#"><img class="news-item-image" src="./assets/img/crab.jpg"></a>
+            <div class="news-item-description">
+              <h3 class="news-item-description__heading"><a href="#">Сайт рыба текст поможет  дизайнеру</a></h3>
+              <p class="news-item-description__snippet"> <a href="#">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</a></p><a class="news-item-description__link" href="#">Читать далее...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-2">
+        <button class="news-button col-md-2 col-6">Все новости</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid subscribe">
+    <div class="container subscribe-form">
+      <h2 class="subscribe-heading">ПОДПИШИТЕСЬ НА НОВОСТИ И <br>ПОЛУЧАЙТЕ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ!</h2>
+      <form class="row">
+        <div class="col-md-4">
+          <input class="subscribe-field" type="text" name="name" placeholder="Ваше имя">
+        </div>
+        <div class="col-md-4">
+          <input class="subscribe-field" type="text" name="email" placeholder="Ваш E-mail">
+        </div>
+        <div class="col-md-4">
+          <input class="subscribe-field subscribe-button" type="submit" value="Подписаться">
+          <p>Нажимая на кнопку, Вы соглашаетесь с <br><a class="subscribe-policy" href="#">политикой конфиденциальности</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="container-fluid container-lg">
+    <div class="row">
+      <div class="footer-logo col-md-2 col-5"><a href="https://roslovets-sandbox.ru"><img src="./assets/img/Footer-logo.png"></a></div>
+      <address class="address col-md-4 col-7">
+        <div class="location d-flex align-items-center"><i class="fas fa-map-marker-alt location-icon"></i>
+          <p class="location-description">г. Санкт-Петербург ул. Садовая 5<br><a href="#">Смотреть на карте</a></p>
+        </div>
+        <div class="phone d-flex align-items-center"><i class="fas fa-phone-alt phone-icon"></i>
+          <p class="phone-description">+7 000 000 00 00<br><span class="hours">Работаем с 9:00 до 21:00</span></p>
+        </div>
+        <div class="email d-flex align-items-center"><i class="fas fa-envelope-open-text email-icon"></i>
+          <p class="email-description"> <a href="mailto:Info@gmail.com">Info@gmail.com</a></p>
+        </div>
+      </address>
+      <nav class="footer-navbar col-md-2 d-none d-md-block">
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">О нас</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Оплата и доставка</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Акции и скидки</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Новости</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Рецепты</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Контакты</a></div>
+      </nav>
+      <nav class="footer-navbar col-md-2 d-none d-md-block">
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Личный кабинет</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Корзина</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Кулинарные рецепты</a></div>
+        <div class="footer-nav-item"><a class="footer-nav-link" href="#">Карта сайта</a></div>
+      </nav>
+      <div class="soc col-md-1 justify-content-md-between d-flex justify-content-center px-1"><a href="https://vk.com"><img src="./assets/img/vk.png" alt="vk"></a><a href="https://facebook.com"><img src="./assets/img/facebook.png" alt="facebook"></a><a href="https://instagram.com"><img src="./assets/img/instagram.png" alt="instagram"></a></div>
+    </div>
+  </div>
+</footer>

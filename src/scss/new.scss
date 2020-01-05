@@ -1,0 +1,552 @@
+@import './mixins.scss';
+
+
+$bg-color:#fff;
+$main-color:#ff7f8e;
+$main-color-dark:rgb(250, 71, 67);
+$font-dark:#212121;
+$font-grey:#c8c8c8;
+$font-light:#fff;
+$button-gradient:linear-gradient(0deg, rgb(250,71,66) 0%, rgb(255,127,142) 100%);
+$text:'Roboto', sans-serif;
+
+body{
+    background:$bg-color;
+    font-size:14px;
+    font-family:$text;
+    @media screen and (max-width:1200px){
+        font-size:12px;
+    }
+}
+p{
+    margin:0;
+}
+hr{
+    @include borderedBox;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family:'Montserrat', sans-serif;
+}
+/* header */
+.logo{
+    position: absolute;
+    @media screen and (max-width:767px){
+        position: static;
+    }
+}
+.search-icon{
+    color:$main-color-dark;
+    cursor: pointer;
+    @media screen and (max-width:767px){
+        font-size:24px;
+    }
+}
+.search{
+    border:none;
+    background:transparent;
+    &:focus{
+        outline:none
+    }
+    &-input{
+        display:flex;
+        align-items:center;
+    }
+    @media screen and (max-width:767px){
+        font-size:14px;
+    }
+}
+.soc{
+    padding-right: 75px;
+    & img{
+        opacity:1;
+        @include transition;
+        &:hover{
+            opacity:.8;
+        }
+    }
+    @media screen and (max-width:767px){
+        padding-right: 0px;
+    }
+}
+.logIn{
+    & img{
+        margin-right: 10px;
+    }
+    & a{
+        color:$main-color;
+        @include transition;
+        &:hover{
+            color:$main-color-dark;
+            text-decoration: none;
+        }
+    }
+}
+.food-market{
+    color:$font-dark;
+}
+.buisness-hours{
+    &__phone{
+        color:$font-dark;
+    }
+    &__hours{
+        color:$font-grey;
+        font-size:12px;
+        @media screen and (max-width:992px){
+            font-size:10px;
+        }
+    }
+}
+.delivery{
+    color:#929292;
+    & img{
+        float:left;
+        margin-right:10px;
+    }
+    @media screen and (max-width:992px){
+        font-size:10px;
+    }
+}
+.back-call{
+    & button{
+        background:$button-gradient;
+        color:$font-light;
+        border:none;
+        border-radius: 19.5px;
+        padding: 10px 20px;
+        @include transition;
+        &:hover{
+            box-shadow: 0px 4px 15px 0px rgba(250, 71, 67, 0.5);
+        }
+    }
+}
+.phone-mobile{
+    font-size:14px;
+    color:$font-dark;
+    text-align: right;
+    &:hover, &:active{
+        text-decoration: none;
+        color:$font-dark;
+    }
+}
+
+/* navbar */
+.catalog {
+    & .fa-bars{
+        margin-right:10px;
+        font-size:20px;
+    }
+    & a{
+        color:$font-light;
+    }
+}
+.nav{
+    background:$main-color;
+    color:$font-light;
+    &-link{
+        color:$font-light;
+        font-weight:bold;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+/*Стили для меню wordpress*/
+li.menu-item a{
+    color:$font-light;
+    font-weight:bold;
+    padding:.5rem;
+    @include transition;
+    &:hover{
+        text-decoration: none;
+        color:darken($font-light, 10%);
+    }
+}
+
+.cart{
+    color:$font-light;
+    @include transition;
+    &:hover{
+        color:darken($font-light, 10%);
+        text-decoration: none;
+    }    
+    & .fa-shopping-basket{
+        margin-right:10px;
+        font-size:30px;
+        align-self:center;
+        @media screen and (max-width:767px) {
+            color:$main-color;
+        }
+    }
+    
+}
+/* main content */
+.main{
+    background:url('../img/main-bg.jpg');
+}
+.catalog-menu{
+    &__list{        
+        background:$bg-color;
+        padding:0;
+        margin:0;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.07);  
+    }
+    &__item{        
+        padding: 0;
+        height:44px;
+        @include transition;
+        & a{
+            display:flex;
+            align-items:center;
+            height:100%;
+            width:100%;
+            margin-left:15px;
+            color:$font-dark;
+            @include transition;
+            & img{
+                margin-right:15px;
+            }
+        }
+        &:hover{
+            background:$main-color;
+            & img{
+                filter:brightness(2);
+            }
+            & a{
+                color:$font-light;
+                text-decoration: none;
+            }
+        }
+    }
+    &__line{
+        margin:0;
+    }
+}
+
+.banner{
+    &-block{
+        background:url('../img/Banner.png') no-repeat;
+        height:100%;
+        padding: 110px 0 0 95px;
+        color:$font-light;
+        @media screen and (max-width:767px) {
+            padding: 110px 20px;
+        }
+    }
+    &-heading{
+        font-family:'Montserrat', sans-serif;
+        font-size:48px;
+        font-weight:bold;
+        letter-spacing: 2px;
+        @media screen and (max-width:959px) {
+            font-size:25px;
+        }
+    }
+    &-description{
+        font-size:18px;
+        letter-spacing: 1px;
+        margin-bottom:30px;
+        @media screen and (max-width:959px) {
+            font-size:14px;
+        }
+    } 
+    &-button{
+        background:$button-gradient;
+        color:$font-light;
+        border:none;
+        border-radius: 19.5px;
+        padding: 10px 20px;
+        @include transition;
+        &:hover{
+            box-shadow: 0px 4px 15px 0px rgba(250, 71, 67, 0.5);
+        }
+    }
+}
+
+.recomended{
+    padding:40px 0 0 0;    
+    font-weight:bold;
+    &-heading{
+        color:$font-dark;
+        font-weight:bold;
+        font-size:48px;
+        letter-spacing: 2px;
+        text-align: center;
+        @media screen and (max-width:959px) {
+            font-size:25px;
+        }
+    }
+    &-block{
+        background:#fff;
+        padding:0 20px 30px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.07); 
+        @media screen and (max-width:767px) {
+            margin-bottom: 20px;
+        }   
+    }
+    &-image{
+        width:100%;
+    }
+    &-description{
+        margin:10px 0;
+        @include transition;
+        color:$font-dark;
+        text-decoration: none;
+        &:hover{
+            color:$font-grey;
+            cursor:pointer;            
+            text-decoration: none;
+        }
+    }
+    &-button{
+        width:57px;
+        color:$bg-color;
+        border:1px solid $main-color;
+        background:$main-color;
+        border-radius:13px;
+        @include transition;
+        &:hover{
+            box-shadow: 0px 4px 15px 0px rgba(250, 71, 67, 0.5);
+        }
+        &__bordered{
+            width:57px;
+            background:$bg-color;
+            border:1px solid $main-color;
+            border-radius:13px;
+            color:$main-color;
+            &:hover{
+                box-shadow: 0px 4px 15px 0px rgba(250, 71, 67, 0.5);
+            }
+        }
+        &__catalog{
+            @extend .banner-button;
+        }
+    }
+    &-price{
+        margin:20px 0 0;
+        .price-crossed{
+            font-weight: normal;
+            color:$font-grey;
+            text-decoration: line-through;
+        }
+    }
+    &-cart{
+        background: $button-gradient;
+    }
+}
+.rating{
+    &-star{
+        color:$main-color;
+        &__unrated{
+            color:$font-grey;
+        }
+    }
+}
+.advantages{
+    margin-top:60px;
+    padding:50px 65px;
+    background:url('../img/advantages-bg.jpg');
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.07);  
+    &-heading{
+        text-align: center;
+        font-size:48px;
+        font-weight:bold;
+        color:$font-dark;
+        margin-bottom:70px;
+        @media screen and (max-width:959px) {
+            font-size:25px;
+        }
+    }
+}
+.advantage{
+    &-icon{
+        margin-bottom:40px;
+    }
+    &-description{
+        font-size:18px;
+        text-align: center;
+    }
+}
+.news{
+    margin:50px 0 60px;
+    &-heading{
+        @extend .advantages-heading;
+        margin-bottom:30px;
+
+    }
+    &-item{        
+        background:$bg-color;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.07);
+        cursor:pointer;
+        &-image{
+            width: 100%;
+        }
+        &-description{
+            padding:20px 20px 30px;
+            &__heading{
+                font-family:'Roboto', sans-serif;
+                font-size:16px;
+                font-weight:bold;
+                & a{                    
+                    color:$font-dark;
+                    @include transition;
+                    &:hover{
+                        text-decoration: none;
+                        color:$font-grey;
+                    }
+                }
+            }
+            &__snippet{                
+                font-weight:bold; 
+                & a{                    
+                    color:$font-dark;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }              
+            }
+            &__link{
+                color:$main-color;
+                text-decoration: underline;
+                @include transition;
+                &:hover{
+                    color:darken($main-color, 10%);
+                }
+            }
+        }
+        @media screen and (max-width:767px) {
+            margin-bottom: 20px;
+        }
+    }
+    &-button{
+        @extend .banner-button;
+        margin-top:30px;
+    }
+}
+.subscribe{
+    background:url('../img/form-bg.png') no-repeat center center;
+    background-size:cover;
+    color:$font-light;
+    padding:40px 0 50px;
+    &-heading{
+        font-size:18px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    &-field{
+        width: 100%;
+        background:transparent;
+        border:1px solid #fff;
+        border-radius:20px;
+        padding:9px 15px;
+        color:$font-light;
+        &::placeholder{
+            color:$font-light;
+        }
+        &:focus{
+            outline:none;
+        }
+        @media screen and (max-width:767px) {
+            margin-bottom: 20px;
+        }
+    }
+    &-button{
+        @extend .banner-button;
+        background:$button-gradient;
+        border:none;
+        margin-bottom: 10px;
+    }
+    &-policy{
+        color:$main-color;
+        text-decoration: underline;
+        @include transition;
+        &:hover{
+            color:darken($main-color, 10%);
+        }
+    }
+    @media screen and (max-width:767px) {
+        background-size: cover;
+    }
+}
+
+
+/* footer */
+footer{
+    padding:35px 0 50px;
+}
+.address{
+    color:$font-dark;
+    font-weight:bold;
+}
+
+.location{
+    margin-bottom:10px;
+    &-icon{
+        color:$main-color;
+        margin-right:10px;
+        font-size:20px;
+    }
+    &-description{
+        & a{
+            font-size:12px;
+            color:$main-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.phone{
+    @extend .location;
+    &-icon{
+        @extend .location-icon
+    }
+    &-description {
+        & .hours{
+            font-size:12px;
+            font-weight:normal;
+            color:$font-grey;
+        }
+    }
+}
+
+.email{
+    @extend .location;
+    &-description{
+        & a{
+            font-size:12px;
+            color:$main-color;
+            text-decoration: underline;
+        }
+    }
+    &-icon{
+        @extend .location-icon
+    }
+}
+
+.footer-nav{
+    &-link{
+        color:$font-dark;
+        font-weight:bold;
+        @include transition;
+        &:hover{
+            color:lighten($font-dark, 40%);
+            text-decoration: none;
+        }
+    }
+}
+
+/* Меню футера WP */
+nav.footer-navbar a{
+    color:$font-dark;
+        font-weight:bold;
+        @include transition;
+        &:hover{
+            color:lighten($font-dark, 40%);
+            text-decoration: none;
+        }
+}
+.menu {
+    list-style: none;
+    padding: 0;
+}

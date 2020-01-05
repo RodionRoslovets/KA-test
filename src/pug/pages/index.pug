@@ -1,0 +1,88 @@
+extends ../layout/main.pug
+
+block content
+	main.main
+		.container-fluid.container-lg.pt-3
+			.row
+				.catalog-menu.col-md-3.d-none.d-md-block
+					ul.catalog-menu__list
+						- var catalogMenu = [{name:'Акции и скидки', img:'discount.png'}, {name:'Икра',img:'caviar.png'}, {name:'Морепродукты',img:'shrimp.png'}, {name:'Рыба', img:'fish.png'}, {name:'Консервы',	img:'can.png'}, {name:'Бакалея', img:'groceries.png'}, { name:'Кулинария',	img:'chef.png'}, {name:'Соль и специи',	img:'bottles.png'}, {name:'Энергия океана',	img:'water.png'}, {name:'Витамины',	img:'broccoli.png'}] 
+						each el, ind in catalogMenu
+							li.catalog-menu__item.d-flex.align-items-center
+								a(href='#') 
+									img(src=`./assets/img/${el.img}`)
+									| #{el.name}
+							- if(ind !== catalogMenu.length - 1)
+								hr.catalog-menu__line
+				.banner.col-md-9
+					.banner-block.d-flex.flex-column.align-items-start
+						p.banner-heading Камчатский краб
+						p.banner-description Сайт рыбатекст поможет дизайнеру, верстальщику,
+							br
+							| вебмастеру сгенерировать
+						button.banner-button Подробнее 
+			.recomended
+				h2.recomended-heading Рекомендуем
+				.row
+					- var images=['fish-steak.jpg', 'meat.jpg', 'fish.jpg', 'caviar-jar.jpg']
+					-for(let i = 0; i < 4; i++)
+						.col-md-3
+							.recomended-block
+								img.recomended-image(src=`./assets/img/${images[i]}`)
+								.recomended-rating
+									i.rating-star.fas.fa-star
+									i.rating-star.fas.fa-star
+									i.rating-star.fas.fa-star
+									i.rating-star.fas.fa-star
+									i.rating-star.rating-star__unrated.fas.fa-star
+								a(href="#").recomended-description Барабулька черноморская (10-13 см) свежемороженая, 1 кг
+								.recomended-buttons
+									button.recomended-button 5 кг
+									button.recomended-button__bordered 20 кг
+								.recomended-price.d-flex.justify-content-between
+									.price-line.d-flex
+										.price-crossed 870 руб.
+										.price-normal 870 руб.
+									button.recomended-button.recomended-cart
+										i.fas.fa-shopping-basket
+				.d-flex.justify-content-center.mt-2
+					button.recomended-button__catalog Перейти в каталог
+			.advantages.col-12
+				h2.advantages-heading Наши преимущества
+				.row.d-flex.justify-content-around
+					- var advantagesImg = [{name:'Быстрая доставка', image:'truck.png'}, {name:'Высокое качество продуктов', image:'ok.png'} , {name:'Бонусы за покупки', image:'present.png'} ]
+					each el in advantagesImg
+						.advantage.d-flex.flex-column.align-items-center
+							img.advantage-icon(src=`./assets/img/${el.image}`)
+							p.advantage-description #{el.name}
+			.news.col-12
+				h2.news-heading Новости
+				.row
+					-for(let i = 0; i < 3; i++)
+						.col-md-4
+							.news-item
+								a(href="#")
+									img.news-item-image(src="./assets/img/crab.jpg")
+								.news-item-description
+									h3.news-item-description__heading
+										a(href="#") Сайт рыба текст поможет  дизайнеру
+									p.news-item-description__snippet 
+										a(href="#") Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру
+									a.news-item-description__link(href="#") Читать далее...
+				.d-flex.justify-content-center.mt-2
+					button.news-button.col-md-2.col-6 Все новости
+		.container-fluid.subscribe
+			.container.subscribe-form
+				h2.subscribe-heading ПОДПИШИТЕСЬ НА НОВОСТИ И 
+					br
+					| ПОЛУЧАЙТЕ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ!
+				form.row
+					.col-md-4
+						input.subscribe-field(type="text" name="name" placeholder="Ваше имя")
+					.col-md-4
+						input.subscribe-field(type="text" name="email" placeholder="Ваш E-mail")
+					.col-md-4
+						input.subscribe-field.subscribe-button(type="submit" value="Подписаться")
+						p Нажимая на кнопку, Вы соглашаетесь с 
+							br
+							a.subscribe-policy(href="#") политикой конфиденциальности

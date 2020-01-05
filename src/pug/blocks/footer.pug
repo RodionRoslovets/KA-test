@@ -1,0 +1,40 @@
+
+- var footerMenu = ['О нас', 'Оплата и доставка', 'Акции и скидки', 'Новости' , 'Рецепты', 'Контакты']
+- var siteMenu = ['Личный кабинет', 'Корзина', 'Кулинарные рецепты', 'Карта сайта']
+
+footer
+	.container-fluid.container-lg
+		.row
+			.footer-logo.col-md-2.col-5
+				a(href="https://roslovets-sandbox.ru")
+					img(src="./assets/img/Footer-logo.png")
+			address.address.col-md-4.col-7
+				.location.d-flex.align-items-center
+					i.fas.fa-map-marker-alt.location-icon
+					p.location-description г. Санкт-Петербург ул. Садовая 5
+						br
+						a(href="#") Смотреть на карте
+				.phone.d-flex.align-items-center
+					i.fas.fa-phone-alt.phone-icon
+					p.phone-description +7 000 000 00 00
+						br
+						span.hours Работаем с 9:00 до 21:00
+				.email.d-flex.align-items-center
+					i.fas.fa-envelope-open-text.email-icon
+					p.email-description 
+						a(href="mailto:Info@gmail.com") Info@gmail.com
+			nav.footer-navbar.col-md-2.d-none.d-md-block
+				each el in footerMenu
+					.footer-nav-item
+						a(href="#").footer-nav-link #{el}
+			nav.footer-navbar.col-md-2.d-none.d-md-block
+				each el in siteMenu
+					.footer-nav-item
+						a(href="#").footer-nav-link #{el}
+			.soc.col-md-1.justify-content-md-between.d-flex.justify-content-center.px-1
+						a(href="https://vk.com")
+							img(src="./assets/img/vk.png" alt="vk")
+						a(href="https://facebook.com")
+							img(src="./assets/img/facebook.png" alt="facebook")
+						a(href="https://instagram.com")
+							img(src="./assets/img/instagram.png" alt="instagram")
